@@ -4,15 +4,26 @@
   <meta charset="utf-8">
   <title>My Math Blog</title>
   
-  <!-- កូដសម្រាប់ភ្ជាប់ប្រព័ន្ធ MathJax ដើម្បីបង្ហាញរូបមន្តគណិត -->
+  <!-- កូដកំណត់ (Config) ឱ្យវេបសាយស្គាល់សញ្ញា $ -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  
+  <!-- កូដសម្រាប់ភ្ជាប់ប្រព័ន្ធ MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <h1>សូមស្វាគមន៍មកកាន់ វេបសាយរបស់ខ្ញុំ</h1>
-  <p> Let  $\mathbb{C} $ be a compplex linear space over $\mathbb{C}$ with $|||| $៖</p>
   
-  <!-- ការសរសេរកូដ LaTeX ចន្លោះសញ្ញា $$ វានឹងចេញជារូបមន្ត -->
+  <!-- ការប្រើ $ សម្រាប់រូបមន្តតូចតាច -->
+  <p>Let $\mathbb{C}$ be a complex linear space over $\mathbb{C}$ with norm $||x||$៖</p>
+  
+  <!-- ការប្រើ $$ សម្រាប់រូបមន្តធំ -->
   <p>$$ \vec{f}(M) = \alpha \vec{MA} + \beta \vec{MB} $$</p>
 
 </body>
