@@ -4,26 +4,28 @@
   <meta charset="utf-8">
   <title>My Math Blog</title>
   <style>
-  body {
-    /* ដាក់រូបភាព Background (អាចដាក់ Link រូបភាពពីអ៊ិនធឺណិត ឬឈ្មោះរូបក្នុង GitHub របស់អ្នក) */
-    background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401');
-    background-size: cover; /* ឱ្យរូបភាពរីកបាំងពេញអេក្រង់ល្មម */
-    background-position: center; /* ឱ្យរូបភាពនៅចំកណ្តាល */
-    background-attachment: fixed;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
+    body {
+      /* ដាក់ផ្ទៃខាងក្រោយពណ៌ផ្ទៃមេឃ (Sky Blue Gradient) */
+      background: linear-gradient(135deg, #87CEEB, #B0E0E6);
+      background-attachment: fixed;
+      color: #000000; /* ដូរអក្សរទៅជាពណ៌ខ្មៅដើម្បីងាយអានលើ nền ផ្ទៃមេឃ */
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center; /* ធ្វើឱ្យអក្សរនៅចំកណ្តាល */
+    }
   
-  /* ធ្វើឱ្យប្រអប់អត្ថបទដាច់ចេញពី Background ងាយស្រួលអាន */
-  .box {
-    background-color: rgba(0, 0, 0, 0.8); /* ផ្ទៃប្រអប់ខ្មៅស្រអាប់ មើលឃើញរូបខាងក្រោយរំលេចបន្តិច */
-    padding: 10px;
-    margin: 10px auto;
-    max-width: 100px;
-    border-radius: 8px;
-  }
-</style>
+    /* ប្រអប់សម្រាប់ដាក់សាច់រឿង ឬលំហាត់ */
+    .box {
+      background-color: rgba(255, 255, 255, 0.85); /* ផ្ទៃប្រអប់ពណ៌សស្រអាប់ ធ្វើឱ្យអក្សរលេចធ្លោ */
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px; /* កំណត់ទំហំប្រអប់ឱ្យទូលាយល្មមអាន */
+      border-radius: 8px;
+      text-align: left; /* ให้อក្សរក្នុងប្រអប់រត់ពីឆ្វេងទៅស្តាំ */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+  
   <!-- កូដកំណត់ (Config) ឱ្យវេបសាយស្គាល់សញ្ញា $ -->
   <script>
     MathJax = {
@@ -38,29 +40,18 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <h1>​\color{blue}សូមស្វាគមន៍មកកាន់ វេបសាយ គណិតវិទ្យា</h1>
+
+  <h1 style="color: #004080;">សូមស្វាគមន៍មកកាន់ វេបសាយគណិតវិទ្យា</h1>
   
-  <!-- ការប្រើ $ សម្រាប់រូបមន្តតូចតាច -->
-  <p>Let $\mathbb{C}$ be a complex linear space over $\mathbb{C}$ with norm $|| : \mathbb{C}\to \mathbb{R} $ such that $ ||z||=|z|=
-    \sqrt{a^2+b^2},\forall z\in a+bi.$ Show that $(\mathbb{C},||$  is norme space.</p>
-  <p> $$\textbf{Solution}$$ <p>
-
-
-%==========================================================
-  <p> We Show that <p>  
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="box">
+    <!-- ការប្រើ $ សម្រាប់រូបមន្តតូចតាច -->
+    <p>Let $\mathbb{C}$ be a complex linear space over $\mathbb{C}$ with norm $||\cdot|| : \mathbb{C} \to \mathbb{R}$ such that $||z|| = |z| = \sqrt{a^2+b^2}, \forall z = a+bi$. Show that $(\mathbb{C}, ||\cdot||)$ is a normed space.</p>
     
+    <p style="text-align: center; color: #004080;"><b>$$\textbf{Solution}$$</b></p>
+    
+    <p>We show that:</p>
+    <!-- កន្លែងសម្រាប់សរសេរបន្តផ្នែក Solution -->
+  </div>
 
 </body>
 </html>
