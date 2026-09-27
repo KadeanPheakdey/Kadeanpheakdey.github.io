@@ -5,23 +5,22 @@
   <title>My Math Blog</title>
   <style>
     body {
-      /* ដាក់ផ្ទៃខាងក្រោយពណ៌ផ្ទៃមេឃ (Sky Blue Gradient) */
       background: linear-gradient(135deg, #87CEEB, #B0E0E6);
       background-attachment: fixed;
-      color: #000000; /* ដូរអក្សរទៅជាពណ៌ខ្មៅដើម្បីងាយអានលើ nền ផ្ទៃមេឃ */
+      color: #000000;
       font-family: Arial, sans-serif;
       padding: 20px;
-      text-align: center; /* ធ្វើឱ្យអក្សរនៅចំកណ្តាល */
+      text-align: left;
     }
   
     /* ប្រអប់សម្រាប់ដាក់សាច់រឿង ឬលំហាត់ */
     .box {
-      background-color: rgba(255, 255, 255, 0.85); /* ផ្ទៃប្រអប់ពណ៌សស្រអាប់ ធ្វើឱ្យអក្សរលេចធ្លោ */
+      background-color: rgba(255, 255, 255, 0.85);
       padding: 20px;
       margin: 20px auto;
-      max-width: 800px; /* កំណត់ទំហំប្រអប់ឱ្យទូលាយល្មមអាន */
+      max-width: 800px;
       border-radius: 8px;
-      text-align: left; /* ให้อក្សរក្នុងប្រអប់រត់ពីឆ្វេងទៅស្តាំ */
+      text-align: left; 
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
@@ -41,58 +40,45 @@
 </head>
 <body>
 
-  <h1 style="color: #004080;">សូមស្វាគមន៍មកកាន់ វេបសាយគណិតវិទ្យា(កាឌាន ភក្តី)</h1>
+  <h1 style="text-align: center; color: #004080;">សូមស្វាគមន៍មកកាន់ វេបសាយគណិតវិទ្យា</h1>
   
   <div class="box">
-    <!-- ការប្រើ $ សម្រាប់រូបមន្តតូចតាច -->
-    <p>Let $\mathbb{C}$ be a complex linear space over $\mathbb{C}$ with normed $||\cdot|| : \mathbb{C} \to \mathbb{R}$ such that $||z|| = |z| = \sqrt{a^2+b^2}, \forall z = a+bi$. Show that $(\mathbb{C}, ||\cdot||)$ is a normed space.</p>
+    <!-- ការសរសេរបម្រាប់លំហាត់ -->
+    <p>Let $\mathbb{C}$ be a complex linear space over $\mathbb{C}$ with norm $||\cdot|| : \mathbb{C} \to \mathbb{R}$ such that $||z|| = |z| = \sqrt{a^2+b^2}, \forall z = a+bi$. Show that $(\mathbb{C}, ||\cdot||)$ is a normed space.</p>
     
-   
-   
+    <p style="text-align: center; color: #004080;"><b>Solution</b></p>
+    
+    <p>We show that:</p>
+    
+    <!-- លក្ខណៈទី ១ -->
+    <p>(1) $||z|| = |z| = \sqrt{a^2 + b^2} \ge 0 \quad \forall z = a + ib \in \mathbb{C}$; hence $||z|| \ge 0$.</p>
+
+    <!-- លក្ខណៈទី ២ -->
+    <p>(2) Let $z = a + ib \in \mathbb{C}$<br>
+    $||z|| = |z| = \sqrt{a^2 + b^2} = 0 \iff a = b = 0 \iff z = 0 + 0i = 0$.</p>
+
+    <!-- លក្ខណៈទី ៣ (ប្តូរមកប្រើ aligned ដើម្បីឱ្យវាដំណើរការរលូន) -->
+    <p>(3) Let $z, w \in \mathbb{C}$</p>
+    <p>
+    $$
+    \begin{aligned}
+    ||z + w||^2 &= (z+w)(\overline{z+w}) \quad \text{where } \overline{z+w} = \text{conjugate of } z+w \\
+    &= (z+w)(\bar{z} + \bar{w}) = z\bar{z} + w\bar{w} + w\bar{z} + \bar{w}z \\
+    &= z\bar{z} + w\bar{w} + w\bar{z} + \overline{w\bar{z}} \\
+    &= z\bar{z} + w\bar{w} + 2\text{Re}(w\bar{z}) \\
+    &\le ||z||^2 + ||w||^2 + 2||w|| \cdot ||z|| = (||z|| + ||w||)^2.
+    \end{aligned}
+    $$
+    </p>
+    <p>Thus, $||z + w||^2 \le (||z|| + ||w||)^2$ and hence, $||z + w|| \le ||z|| + ||w||$.</p>
+
+    <!-- លក្ខណៈទី ៤ -->
+    <p>(4) Let $z \in \mathbb{C}, \alpha \in \mathbb{C}$,<br>
+    $||\alpha z|| = |\alpha z| = |\alpha(a+ib)|$</p>
+    <p>
+    $$ = \sqrt{(\alpha a)^2 + (\alpha b)^2} = \sqrt{\alpha^2(a^2 + b^2)} = \sqrt{\alpha^2}\sqrt{a^2 + b^2} = |\alpha| \cdot ||z||. $$
+    </p>
   </div>
 
-<p style="text-align: center;">$$\textbf{Solution}$$</p>
-
-
-<p><b></b> We show that</p>
-
-<!-- លក្ខណៈទី ១ -->
-<p>$(1)$ $\|z\| = |z| = \sqrt{a^2 + b^2} \ge 0 \quad \forall z = a + ib \in C$; hence $\|z\| \ge 0$.</p>
-
-<!-- លក្ខណៈទី ២ -->
-<p>$(2)$ Let $z = a + ib \in C$<br>
-$\|z\| = |z| = \sqrt{a^2 + b^2} = 0 \iff a = b = 0 \iff z = 0 + 0i = 0$.</p>
-
-<!-- លក្ខណៈទី ៣ (ប្រើ align* ដើម្បីឱ្យសញ្ញា = ត្រង់ជួរគ្នា) -->
-<p>$(3)$ Let $z, w \in C$</p>
-<p>
-$$
-\begin{align*}
-\|z + w\|^2 &= (z+w)(\overline{z+w}) \quad \text{where } \overline{z+w} = \text{conjugate of } z+w \\
-&= (z+w)(\bar{z} + \bar{w}) = z\bar{z} + w\bar{w} + w\bar{z} + \bar{w}z \\
-&= z\bar{z} + w\bar{w} + w\bar{z} + \overline{w\bar{z}} \\
-&= z\bar{z} + w\bar{w} + 2\text{Re}(w\bar{z}) \\
-&\le \|z\|^2 + \|w\|^2 + 2\|w\|\|z\| = (\|z\| + \|w\|)^2.
-\end{align*}
-$$
-</p>
-<p>Thus, $\|z + w\|^2 \le (\|z\| + \|w\|)^2$ and hence, $\|z + w\| \le \|z\| + \|w\|$.</p>
-
-<!-- លក្ខណៈទី ៤ -->
-<p>$(4)$ Let $z \in C, \alpha \in C,$<br>
-$\|\alpha z\| = |\alpha z| = |\alpha(a+ib)|$</p>
-<p>
-$$ = \sqrt{(\alpha a)^2 + (\alpha b)^2} = \sqrt{\alpha^2(a^2 + b^2)} = \sqrt{\alpha^2}\sqrt{a^2 + b^2} = |\alpha||z| = |\alpha|\|z\|. $$
-</p>
-
-
-
-
-
-
-
-
-
-  
 </body>
 </html>
