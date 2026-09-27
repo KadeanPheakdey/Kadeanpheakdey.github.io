@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>My Math Blog</title>
+  <style>
+  body {
+    /* ដាក់រូបភាព Background (អាចដាក់ Link រូបភាពពីអ៊ិនធឺណិត ឬឈ្មោះរូបក្នុង GitHub របស់អ្នក) */
+    background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401');
+    background-size: cover; /* ឱ្យរូបភាពរីកបាំងពេញអេក្រង់ល្មម */
+    background-position: center; /* ឱ្យរូបភាពនៅចំកណ្តាល */
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
   
+  /* ធ្វើឱ្យប្រអប់អត្ថបទដាច់ចេញពី Background ងាយស្រួលអាន */
+  .box {
+    background-color: rgba(0, 0, 0, 0.8); /* ផ្ទៃប្រអប់ខ្មៅស្រអាប់ មើលឃើញរូបខាងក្រោយរំលេចបន្តិច */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 8px;
+  }
+</style>
   <!-- កូដកំណត់ (Config) ឱ្យវេបសាយស្គាល់សញ្ញា $ -->
   <script>
     MathJax = {
