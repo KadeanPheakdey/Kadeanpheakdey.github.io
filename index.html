@@ -54,7 +54,36 @@
 <p style="text-align: center;">$$\textbf{Solution}$$</p>
 
 
-<p style="text-align: left;">$$(1)$$</p>
+<p><b>Solution:</b> We show that</p>
+
+<!-- លក្ខណៈទី ១ -->
+<p>(1) $\|z\| = |z| = \sqrt{a^2 + b^2} \ge 0 \quad \forall z = a + ib \in C$; hence $\|z\| \ge 0$.</p>
+
+<!-- លក្ខណៈទី ២ -->
+<p>(2) Let $z = a + ib \in C$<br>
+$\|z\| = |z| = \sqrt{a^2 + b^2} = 0 \iff a = b = 0 \iff z = 0 + 0i = 0$.</p>
+
+<!-- លក្ខណៈទី ៣ (ប្រើ align* ដើម្បីឱ្យសញ្ញា = ត្រង់ជួរគ្នា) -->
+<p>(3) Let $z, w \in C$</p>
+<p>
+$$
+\begin{align*}
+\|z + w\|^2 &= (z+w)(\overline{z+w}) \quad \text{where } \overline{z+w} = \text{conjugate of } z+w \\
+&= (z+w)(\bar{z} + \bar{w}) = z\bar{z} + w\bar{w} + w\bar{z} + \bar{w}z \\
+&= z\bar{z} + w\bar{w} + w\bar{z} + \overline{w\bar{z}} \\
+&= z\bar{z} + w\bar{w} + 2\text{Re}(w\bar{z}) \\
+&\le \|z\|^2 + \|w\|^2 + 2\|w\|\|z\| = (\|z\| + \|w\|)^2.
+\end{align*}
+$$
+</p>
+<p>Thus, $\|z + w\|^2 \le (\|z\| + \|w\|)^2$ and hence, $\|z + w\| \le \|z\| + \|w\|$.</p>
+
+<!-- លក្ខណៈទី ៤ -->
+<p>(4) Let $z \in C, \alpha \in C,$<br>
+$\|\alpha z\| = |\alpha z| = |\alpha(a+ib)|$</p>
+<p>
+$$ = \sqrt{(\alpha a)^2 + (\alpha b)^2} = \sqrt{\alpha^2(a^2 + b^2)} = \sqrt{\alpha^2}\sqrt{a^2 + b^2} = |\alpha||z| = |\alpha|\|z\|. $$
+</p>
 
 
 
